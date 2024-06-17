@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 const Filter = ({ filter, onChange }) => {
   const searchId = nanoid();
@@ -27,4 +28,10 @@ const Filter = ({ filter, onChange }) => {
     </>
   );
 };
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default Filter;

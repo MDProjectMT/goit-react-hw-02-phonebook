@@ -3,7 +3,6 @@ import { nanoid } from 'nanoid';
 import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter/Filter';
 import ContactList from '../ContactList/ContactList';
-import PropTypes from 'prop-types';
 
 class ContactsBook extends Component {
   constructor(props) {
@@ -71,16 +70,5 @@ class ContactsBook extends Component {
     );
   }
 }
-
-ContactsBook.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      number: PropTypes.string,
-    })
-  ),
-  filter: PropTypes.string,
-};
 
 export default ContactsBook;
